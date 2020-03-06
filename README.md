@@ -12,15 +12,15 @@ If there is no arguments the default listening port will be 12345.
 
 # Application:
 
-## Acclerate udp based VPN by TCP BBR.
+## Accelerate udp based VPN by TCP BBR.
 
 If your server using advanced tcp congestion control algorithm such as TCP BBR.
 
 And you have already setup an udp based VPN on your server such as WireGuard, OpenVPN, IPSec.
 
-In this case, when vpn client connect to a remote server using legency tcp congestion control such as cubic, the network speed will drop. Especially on a network with too many error packet loss.
+In this case, when vpn client connect to a remote server using legency tcp congestion control such as cubic, and the route between local and vpn server has high packet loss rate, the network speed will drop.
 
-This program will help you acclerate TCP speed by advanced tcp congestion control.
+This program will help you accelerate TCP speed by advanced tcp congestion control.
 
 ### Howto:
 #### 1. Build this program and install
