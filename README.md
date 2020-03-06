@@ -23,14 +23,14 @@ In this case, when vpn client connect to a remote server using legency tcp conge
 This program will help you acclerate TCP speed by advanced tcp congestion control.
 
 ### Howto:
-1. Build this program and install
+#### 1. Build this program and install
 ```
 git clone https://github.com/cyyself/TCPTP-booster.git
 cd TCPTP-booster
 make
 sudo cp bin/tcptp-booster /usr/local/bin/
 ```
-2. make it running on the backgroud
+#### 2. make it running on the backgroud
 
 You can make it running on the backgroud by systemd
 
@@ -55,13 +55,13 @@ systemctl status tcptp-booster
 systemctl enable tcptp-booster
 ```
 
-3. Add rules to IP tables
+#### 3. Add rules to IP tables
 ```
 iptables -t nat -A PREROUTING -p tcp -m tcp -s 192.168.233.0/24 -j REDIRECT --to-ports 12345
 ```
 Please replace **192.168.233.0/24** to **your VPN client subnet**
 
-4. Enjoy it.
+#### 4. Enjoy it.
 
 ### Test
 
