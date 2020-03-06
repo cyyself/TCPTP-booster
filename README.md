@@ -1,6 +1,6 @@
 # TCPTP-booster
 
-This is an simple program to make your Linux server act as TCP Transparent Proxy.
+This is a simple program to make your Linux server act as TCP Transparent Proxy.
 
 # Usage:
 ```
@@ -55,7 +55,7 @@ systemctl status tcptp-booster
 systemctl enable tcptp-booster
 ```
 
-#### 3. Add rules to IP tables
+#### 3. Add rules to iptables
 ```
 iptables -t nat -A PREROUTING -p tcp -m tcp -s 192.168.233.0/24 -j REDIRECT --to-ports 12345
 ```
@@ -67,14 +67,14 @@ Please replace **192.168.233.0/24** to **your VPN client subnet**
 
 Explain my environment:
 
-My local PC connect to a **192.168.233.1** via wireguard.
+My local PC connect to **192.168.233.1** via wireguard.
 
 **192.168.233.1** is a remote vpn server using tcp bbr.
 
-And the **34.80.91.11** is a server using cubic.
+And the **34.80.91.11** is a remote server using cubic.
 
-The first time I didn't add iptables rule so the speed is too low because of high packet loss.
+The first time I didn't apply iptables rule so the speed is too low because of high packet loss.
 
-The second time I added the iptabels rule so the tcp traffic through VPN Server will redirect to my program and using TCP BBR to acclerate the speed.
+The second time I apply the iptabels rule so the tcp traffic through VPN Server will redirect to my program and using TCP BBR to acclerate the speed.
 
 ![test](asserts/images/test.png)
