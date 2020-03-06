@@ -2,7 +2,7 @@
 
 This is a simple program to make your Linux server act as TCP Transparent Proxy.
 
-# Usage:
+## Usage:
 ```
 ./tcptp-booster -l 12345
 ```
@@ -10,9 +10,9 @@ to make it listening on port 12345.
 
 If there is no arguments the default listening port will be 12345.
 
-# Application:
+## Application:
 
-## Accelerate udp based VPN by TCP BBR.
+### Accelerate udp based VPN by TCP BBR.
 
 If your server using advanced tcp congestion control algorithm such as TCP BBR.
 
@@ -22,15 +22,15 @@ In this case, when vpn client connect to a remote server using legency tcp conge
 
 This program will help you accelerate TCP speed by advanced tcp congestion control.
 
-### Howto:
-#### 1. Build this program and install
+#### Howto:
+##### 1. Build this program and install
 ```
 git clone https://github.com/cyyself/TCPTP-booster.git
 cd TCPTP-booster
 make
 sudo cp bin/tcptp-booster /usr/local/bin/
 ```
-#### 2. make it running on the backgroud
+##### 2. make it running on the backgroud
 
 You can make it running on the backgroud by systemd
 
@@ -55,15 +55,15 @@ systemctl status tcptp-booster
 systemctl enable tcptp-booster
 ```
 
-#### 3. Add rules to iptables
+##### 3. Add rules to iptables
 ```
 iptables -t nat -A PREROUTING -p tcp -m tcp -s 192.168.233.0/24 -j REDIRECT --to-ports 12345
 ```
 Please replace **192.168.233.0/24** to **your VPN client subnet**
 
-#### 4. Enjoy it.
+##### 4. Enjoy it.
 
-### Test
+#### Test
 
 Explain my environment:
 
