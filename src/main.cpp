@@ -90,7 +90,7 @@ void accept_client() {
 	}
 	char *clientip = newstr(inet_ntoa(clientaddr.sin_addr)),*myip = newstr(inet_ntoa(myaddr.sin_addr)),*dstip = newstr(inet_ntoa(destaddr.sin_addr));
 	if (myaddr.sin_port == destaddr.sin_port) {
-		//to avoid fork bomb, so you should bind to an incommon port.
+		//to avoid fork bomb, so you should bind to an uncommon port.
 		printf("[ERROR] Self loop detected %s:%d -> %s:%d -> %s:%d\n",
 			clientip,ntohs(clientaddr.sin_port),
 			myip,ntohs(myaddr.sin_port),
