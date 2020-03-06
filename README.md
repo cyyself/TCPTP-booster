@@ -41,7 +41,7 @@ Description=An simple program to make your Linux server act as TCP Transparent P
 
 [Service]
 User=root
-Start=/usr/local/bin/tcptp-booster
+ExecStart=/usr/local/bin/tcptp-booster
 Restart=always
 
 [Install]
