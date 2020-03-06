@@ -34,7 +34,7 @@ sudo cp bin/tcptp-booster /usr/local/bin/
 
 You can make it running on the backgroud by systemd
 
-Adding this to /etc/systemd/system/tcptp-booster.service
+Adding this to `/etc/systemd/system/tcptp-booster.service`
 ```
 [Unit]
 Description=An simple program to make your Linux server act as TCP Transparent Proxy.
