@@ -41,13 +41,13 @@ Description=An simple program to make your Linux server act as TCP Transparent P
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/tcptp-booster
+Start=/usr/local/bin/tcptp-booster
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
-```
-Then exectue these commands:
+
+Then execute these commands:
 ```
 systemctl daemon-reload
 systemctl start tcptp-booster
