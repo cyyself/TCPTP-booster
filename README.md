@@ -37,7 +37,7 @@ You can make it running on the backgroud by systemd
 Adding this to `/etc/systemd/system/tcptp-booster.service`
 ```
 [Unit]
-Description=An simple program to make your Linux server act as TCP Transparent Proxy.
+Description=A simple program to make your Linux server act as TCP Transparent Proxy.
 
 [Service]
 User=root
